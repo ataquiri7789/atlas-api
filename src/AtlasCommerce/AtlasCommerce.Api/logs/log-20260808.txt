@@ -1,0 +1,67 @@
+2026-08-08 10:37:31.208 -05:00 [INF] User profile is available. Using 'C:\Users\Usuario\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-08-08 10:37:31.381 -05:00 [INF] Now listening on: https://localhost:7124
+2026-08-08 10:37:31.382 -05:00 [INF] Now listening on: http://localhost:5018
+2026-08-08 10:37:31.418 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-08 10:37:31.418 -05:00 [INF] Hosting environment: Development
+2026-08-08 10:37:31.419 -05:00 [INF] Content root path: C:\PROYECTOS\NUBE\AWS_NET_PRACTICA\src\AtlasCommerce\AtlasCommerce.Api
+2026-08-08 10:37:47.422 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_vs/browserLink - null null
+2026-08-08 10:37:47.422 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger/index.css - null null
+2026-08-08 10:37:47.422 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - null null
+2026-08-08 10:37:47.466 -05:00 [INF] CorrelationId: dba90164-8468-44a5-b7cf-0010dc435f22
+2026-08-08 10:37:47.474 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger/index.css - 304 null null 58.0522ms
+2026-08-08 10:37:47.504 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_vs/browserLink - 200 null text/javascript; charset=UTF-8 88.2336ms
+2026-08-08 10:37:47.509 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - 404 0 null 93.6705ms
+2026-08-08 10:37:47.515 -05:00 [INF] Request reached the end of the middleware pipeline without being handled by application code. Request path: GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js, Response status code: 404
+2026-08-08 10:37:47.525 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - null null
+2026-08-08 10:37:47.534 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 9.6948ms
+2026-08-08 10:37:52.934 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/Auth/login - application/json 47
+2026-08-08 10:37:52.939 -05:00 [INF] CorrelationId: 950570df-9fb8-4a3d-a728-d476c1f6b5d3
+2026-08-08 10:37:52.941 -05:00 [INF] Executing endpoint 'AtlasCommerce.Api.Controllers.AuthController.Login (AtlasCommerce.Api)'
+2026-08-08 10:37:52.966 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(AtlasCommerce.Application.Features.Authentication.Commands.Login.LoginCommand) on controller AtlasCommerce.Api.Controllers.AuthController (AtlasCommerce.Api).
+2026-08-08 10:37:52.979 -05:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-08-08 10:37:53.008 -05:00 [INF] Handling LoginCommand {"Email":"string","Password":"string","$type":"LoginCommand"}
+2026-08-08 10:37:53.686 -05:00 [INF] Executed DbCommand (36ms) [Parameters=[@email='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."IsActive", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @email
+LIMIT 1
+2026-08-08 10:37:53.704 -05:00 [INF] Validando usuario string
+2026-08-08 10:37:53.705 -05:00 [INF] Handled LoginCommand in 692ms
+2026-08-08 10:37:53.713 -05:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'Error'.
+2026-08-08 10:37:53.727 -05:00 [INF] Executed action AtlasCommerce.Api.Controllers.AuthController.Login (AtlasCommerce.Api) in 758.0601ms
+2026-08-08 10:37:53.729 -05:00 [INF] Executed endpoint 'AtlasCommerce.Api.Controllers.AuthController.Login (AtlasCommerce.Api)'
+2026-08-08 10:37:53.733 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/Auth/login - 401 null application/json; charset=utf-8 799.5327ms
+2026-08-08 10:57:30.990 -05:00 [INF] User profile is available. Using 'C:\Users\Usuario\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-08-08 10:57:31.180 -05:00 [INF] Now listening on: https://localhost:7124
+2026-08-08 10:57:31.181 -05:00 [INF] Now listening on: http://localhost:5018
+2026-08-08 10:57:31.202 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-08 10:57:31.203 -05:00 [INF] Hosting environment: Development
+2026-08-08 10:57:31.204 -05:00 [INF] Content root path: C:\PROYECTOS\NUBE\AWS_NET_PRACTICA\src\AtlasCommerce\AtlasCommerce.Api
+2026-08-08 10:57:36.382 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger/index.html - null null
+2026-08-08 10:57:36.536 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger/index.html - 200 null text/html;charset=utf-8 160.1072ms
+2026-08-08 10:57:36.545 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_vs/browserLink - null null
+2026-08-08 10:57:36.545 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - null null
+2026-08-08 10:57:36.559 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_framework/aspnetcore-browser-refresh.js - 200 16519 application/javascript; charset=utf-8 15.0058ms
+2026-08-08 10:57:36.585 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7124/_vs/browserLink - 200 null text/javascript; charset=UTF-8 40.6305ms
+2026-08-08 10:57:36.601 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - null null
+2026-08-08 10:57:36.608 -05:00 [INF] Request starting HTTP/2 GET https://localhost:7124/swagger/favicon-32x32.png - null null
+2026-08-08 10:57:36.611 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 10.0752ms
+2026-08-08 10:57:36.618 -05:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-08-08 10:57:36.620 -05:00 [INF] Request finished HTTP/2 GET https://localhost:7124/swagger/favicon-32x32.png - 200 628 image/png 12.5512ms
+2026-08-08 10:57:42.253 -05:00 [INF] Request starting HTTP/2 POST https://localhost:7124/api/Auth/login - application/json 47
+2026-08-08 10:57:42.259 -05:00 [INF] CorrelationId: ae191214-0b51-4078-b3b4-7ca3ee8d7bbd
+2026-08-08 10:57:42.308 -05:00 [INF] Executing endpoint 'AtlasCommerce.Api.Controllers.AuthController.Login (AtlasCommerce.Api)'
+2026-08-08 10:57:42.328 -05:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(AtlasCommerce.Application.Features.Authentication.Commands.Login.LoginCommand) on controller AtlasCommerce.Api.Controllers.AuthController (AtlasCommerce.Api).
+2026-08-08 10:57:42.340 -05:00 [WRN] You do not have a valid license key for the Lucky Penny software MediatR. This is allowed for development and testing scenarios. If you are running in production you are required to have a licensed version. Please visit https://luckypennysoftware.com to obtain a valid license.
+2026-08-08 10:57:42.368 -05:00 [INF] Handling LoginCommand {"Email":"string","Password":"string","$type":"LoginCommand"}
+2026-08-08 10:57:43.297 -05:00 [INF] Executed DbCommand (46ms) [Parameters=[@__email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."IsActive", u."PasswordHash", u."Role"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 1
+2026-08-08 10:57:43.313 -05:00 [INF] Validando usuario string
+2026-08-08 10:57:43.315 -05:00 [INF] Handled LoginCommand in 941ms
+2026-08-08 10:57:43.321 -05:00 [INF] Executing UnauthorizedObjectResult, writing value of type 'Error'.
+2026-08-08 10:57:43.331 -05:00 [INF] Executed action AtlasCommerce.Api.Controllers.AuthController.Login (AtlasCommerce.Api) in 998.4176ms
+2026-08-08 10:57:43.333 -05:00 [INF] Executed endpoint 'AtlasCommerce.Api.Controllers.AuthController.Login (AtlasCommerce.Api)'
+2026-08-08 10:57:43.341 -05:00 [INF] Request finished HTTP/2 POST https://localhost:7124/api/Auth/login - 401 null application/json; charset=utf-8 1087.6215ms

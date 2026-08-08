@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Cache\MemoryCache\" />
+    <Folder Include="Cloud\AWS\EventBridge\" />
+    <Folder Include="Cloud\AWS\Lambda\" />
+    <Folder Include="Cloud\AWS\CloudWatch\" />
+    <Folder Include="Cloud\AWS\ParameterStore\" />
+    <Folder Include="Cloud\AWS\S3\" />
+    <Folder Include="Cloud\AWS\SES\" />
+    <Folder Include="Cloud\AWS\SecretsManager\" />
+    <Folder Include="Integrations\Authentication\Basic\" />
+    <Folder Include="Integrations\Authentication\Jwt\" />
+    <Folder Include="Integrations\Authentication\ApiKey\" />
+    <Folder Include="Integrations\Authentication\OAuth\" />
+    <Folder Include="Integrations\Contracts\" />
+    <Folder Include="Integrations\Policies\" />
+    <Folder Include="Integrations\Protocols\Grpc\" />
+    <Folder Include="Integrations\Protocols\Soap\" />
+    <Folder Include="Integrations\Protocols\Rest\" />
+    <Folder Include="Integrations\Providers\IBM\" />
+    <Folder Include="Integrations\Providers\Salesforce\Clients\" />
+    <Folder Include="Integrations\Providers\Salesforce\Mapping\" />
+    <Folder Include="Integrations\Providers\Salesforce\Endpoints\" />
+    <Folder Include="Integrations\Providers\Salesforce\DTOs\" />
+    <Folder Include="Integrations\Providers\Salesforce\Configuration\" />
+    <Folder Include="Integrations\Providers\Salesforce\Services\" />
+    <Folder Include="Integrations\Providers\SAP\" />
+    <Folder Include="Integrations\Resilience\Timeout\" />
+    <Folder Include="Integrations\Resilience\Fallback\" />
+    <Folder Include="Integrations\Resilience\CircuitBreaker\" />
+    <Folder Include="Integrations\Resilience\Retry\" />
+    <Folder Include="Integrations\Serialization\" />
+    <Folder Include="Messaging\Consumers\" />
+    <Folder Include="Messaging\EventBridge\" />
+    <Folder Include="Messaging\Inbox\" />
+    <Folder Include="Messaging\DeadLetterQueue\" />
+    <Folder Include="Messaging\Outbox\" />
+    <Folder Include="Messaging\SNS\" />
+    <Folder Include="Messaging\SQS\" />
+    <Folder Include="Messaging\Publishers\" />
+    <Folder Include="Extensions\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Observability\Logging\" />
+    <Folder Include="Observability\Metrics\" />
+    <Folder Include="Observability\HealthChecks\" />
+    <Folder Include="Observability\OpenTelemetry\" />
+    <Folder Include="Observability\Tracing\" />
+    <Folder Include="Persistence\Migrations\" />
+    <Folder Include="Security\Authentication\" />
+    <Folder Include="Security\Authorization\" />
+    <Folder Include="Security\Policies\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" Version="4.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.4" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" Version="11.0.0-preview.6.26359.118" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
+    <PackageReference Include="StackExchange.Redis" Version="3.1.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AtlasCommerce.Application\AtlasCommerce.Application.csproj" />
+    <ProjectReference Include="..\AtlasCommerce.Domain\AtlasCommerce.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
