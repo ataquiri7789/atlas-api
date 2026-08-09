@@ -20,7 +20,7 @@ builder.Services.AddSwaggerGen(options =>
         Description = "API de AtlasCommerce"
     });
 
-      
+       
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
