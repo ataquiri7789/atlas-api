@@ -67,11 +67,13 @@ jobs:
       - name: TEST REAL ECS
         run: |
           aws ecs describe-services --cluster atlas-cluster --services atlas-task-service-yj758x09
-      - name: DEBUG ECS
+      - name: Deploy ECS
         run: |
-          echo "Cluster: $ECS_CLUSTER"
-          echo "Service: $ECS_SERVICE"
-          aws ecs describe-services --cluster $ECS_CLUSTER --services $ECS_SERVICE
+          aws ecs update-service \
+          --region us-east-1 \
+          --cluster atlas-cluster \
+          --service atlas-task-service-yj758x09 \
+          --force-new-deployment
         
       - name: Deploy to ECS
         run: aws ecs update-service --cluster $ECS_CLUSTER --service $ECS_SERVICE --force-new-deployment
