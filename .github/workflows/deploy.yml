@@ -66,10 +66,10 @@ jobs:
 
       - name: TEST REAL ECS
         run: |
-          aws ecs describe-services --cluster atlas-cluster --services atlas-task-service-yj758x09
+          aws ecs describe-services --cluster atlas-cluster1 --services atlas-task1-service-c87g3dnx
           
       - name: Deploy to ECS
-        run: aws ecs update-service --cluster atlas-cluster --service atlas-task-service-yj758x09 --force-new-deployment
+        run: aws ecs update-service --cluster atlas-cluster1 --service atlas-task1-service-c87g3dnx --force-new-deployment
 
       - name: Wait for ECS deployment
         run: aws ecs wait services-stable --cluster $ECS_CLUSTER --services $ECS_SERVICE
