@@ -72,7 +72,7 @@ jobs:
         run: aws ecs update-service --cluster atlas-cluster1 --service atlas-task1-service-c87g3dnx --force-new-deployment
 
       - name: Wait for ECS deployment
-        run: aws ecs wait services-stable --cluster $ECS_CLUSTER --services $ECS_SERVICE
+        run: aws ecs wait services-stable --cluster atlas-cluster1 --services atlas-task1-service-c87g3dnx
 
       - name: Check ECS status
-        run: aws ecs describe-services --cluster $ECS_CLUSTER --services $ECS_SERVICE
+        run: aws ecs describe-services --cluster atlas-cluster1 --services atlas-task1-service-c87g3dnx
