@@ -51,7 +51,7 @@ jobs:
       - name: Build Docker image
         run: docker build -t $ECR_REPOSITORY ./src/AtlasCommerce
         
-      - name: Verify local image
+      - name: Verify local image docker
         run: docker images
 
       - name: Tag Docker image
