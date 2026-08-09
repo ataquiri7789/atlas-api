@@ -64,6 +64,9 @@ jobs:
       - name: Push Docker image
         run: docker push $AWS_ACCOUNT_ID.dkr.ecr.$AWS_REGION.amazonaws.com/$IMAGE_NAME:latest
 
+      - name: TEST REAL ECS
+        run: |
+          aws ecs describe-services --cluster atlas-cluster --services atlas-task-service-yj758x09
       - name: DEBUG ECS
         run: |
           echo "Cluster: $ECS_CLUSTER"
